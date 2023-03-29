@@ -258,7 +258,7 @@ $posts = [
         ]);
 ```
 
-Ensuite dans la vue `tmplates/blog/index.html.blog` nous allons recuprer le titre et boucler sur les posts poour les afficher.
+Ensuite dans la vue `templates/blog/index.html.blog` nous allons recuprer le titre et boucler sur les posts poour les afficher.
 
 ```
 {% extends 'base.html.twig' %}
