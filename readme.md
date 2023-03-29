@@ -24,7 +24,7 @@ Pour pouvoir travailler avec **Symfony** il faut installer **php** et **composer
 
 Installer l'utilitaire en ligne de commande CLI `symfony` en suivant les instructions : [https://symfony.com/download](https://symfony.com/download).
 
-Vérifier que l'installation c'est bien passé en ouvrant un **terminal**(git bash,powershell,...) , la commande suivante doit vous la version de Symfony CLI : 5.5.2 au :
+Vérifier que l'installation c'est bien passé en ouvrant un **terminal**(git bash,powershell,...) , la commande suivante doit vous la version de Symfony CLI : 5.5.2 :
 
 
 ## A faire
