@@ -144,6 +144,18 @@ La syntaxe de **Twig** est basée sur ces trois constructions :
 - `{% ... %}`, utilisé pour exécuter une logique, telle qu'une condition ou une boucle 
 - `{# ... #}`, utilisé pour ajouter des commentaires au modèle (contrairement aux commentaires HTML, ces commentaires ne sont pas inclus dans la page rendue).
 
+Afin de beneficier de **emmet** dans les fichiers **twig** dans **VSCode** il faut ajouter une ligne dans le fichier **settings** de **VSCOde**
+
+## A Faire
+
+```
+Dans Fichier/Preferences/Settings 
+chercher json 
+clickez sur Edit in settings.json
+ajouter en fin de ce fichier json avec une virgule cette ligne :  "emmet.includeLanguages": {"twig": "html"} 
+```
+
+
 ## A faire
 
 ```
@@ -182,9 +194,59 @@ Pour lister toutes les routes de notre projet :
 php bin/console debug:router
 ```
 
+## CSS
 
+Dans le fichier `base.html.twig` supprimer les lignes suivantes :
 
+## A faire
 
+```
+{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+{% block stylesheets %}
+	{{ encore_entry_link_tags('app') }}
+{% endblock %}
 
+{% block javascripts %}
+	{{ encore_entry_script_tags('app') }}
+{% endblock %}
+```
+Aiter une feuille de style
 
+<link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
 
+Votre feuille de style devra se trouver dans le dossier `public` 
+
+## A faire
+
+```
+public/css/style.css
+```
+
+Agrementer de style pour aligner le menu du header , mettre une largeur maximale et centrer votre site web.
+
+## Passer des données des controllers vers les vues
+
+Dans la methode `index()` du **BlogController** avant de faire le `return` on va créer un tableau que l'on va envoyer à la vue ce **controller**
+
+## A faire
+
+```
+On va jouter un titre pour la page blog et un tableau comportant le titre et le contenu de plusieurs posts de blog
+
+$pageTitre = "Blog Astronomie";
+
+$posts [
+[
+  "titre" => "Vénus la planète rocheuse",
+  "contenu => "Vénus est la deuxième planète du Système solaire par ordre d'éloignement au Soleil, et la sixième plus grosse aussi bien par la masse que le diamètre. Elle doit son nom à la déesse romaine de l'amour."
+ ],
+[
+  "titre" => "La planète Mars",
+  "contenu => "Située à environ 228 millions de kilomètres du Soleil, Mars est la quatrième planète du Système solaire. Sa couleur rouge est donnée par l'abondance d'oxyde de fer (rouille) sur sa surface. Il est facile de trouver Mars dans le ciel grâce à sa couleur, même à l'œil nu."
+],
+[
+  "titre" => "",
+  "contenu => "Située à environ 228 millions de kilomètres du Soleil, Mars est la quatrième planète du Système solaire. Sa couleur rouge est donnée par l'abondance d'oxyde de fer (rouille) sur sa surface. Il est facile de trouver Mars dans le ciel grâce à sa couleur, même à l'œil nu."
+]
+];
+```
