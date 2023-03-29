@@ -231,22 +231,50 @@ Dans la methode `index()` du **BlogController** avant de faire le `return` on va
 ## A faire
 
 ```
-On va jouter un titre pour la page blog et un tableau comportant le titre et le contenu de plusieurs posts de blog
+On va ajouter un titre pour la page blog et un tableau comportant le titre et le contenu de plusieurs posts de blog :
 
 $pageTitre = "Blog Astronomie";
 
-$posts [
-[
-  "titre" => "Vénus la planète rocheuse",
-  "contenu => "Vénus est la deuxième planète du Système solaire par ordre d'éloignement au Soleil, et la sixième plus grosse aussi bien par la masse que le diamètre. Elle doit son nom à la déesse romaine de l'amour."
- ],
-[
-  "titre" => "La planète Mars",
-  "contenu => "Située à environ 228 millions de kilomètres du Soleil, Mars est la quatrième planète du Système solaire. Sa couleur rouge est donnée par l'abondance d'oxyde de fer (rouille) sur sa surface. Il est facile de trouver Mars dans le ciel grâce à sa couleur, même à l'œil nu."
-],
-[
-  "titre" => "",
-  "contenu => "Située à environ 228 millions de kilomètres du Soleil, Mars est la quatrième planète du Système solaire. Sa couleur rouge est donnée par l'abondance d'oxyde de fer (rouille) sur sa surface. Il est facile de trouver Mars dans le ciel grâce à sa couleur, même à l'œil nu."
-]
-];
+$posts = [
+        [
+        "titre" => "Vénus la planète rocheuse",
+        "contenu" => "Vénus est la deuxième planète du Système solaire par ordre d'éloignement au Soleil, et la sixième plus grosse aussi bien par la masse que le diamètre. Elle doit son nom à la déesse romaine de l'amour."
+        ],
+        [
+        "titre" => "La planète Mars",
+        "contenu" => "Située à environ 228 millions de kilomètres du Soleil, Mars est la quatrième planète du Système solaire. Sa couleur rouge est donnée par l'abondance d'oxyde de fer (rouille) sur sa surface. Il est facile de trouver Mars dans le ciel grâce à sa couleur, même à l'œil nu."
+        ],
+        [
+        "titre" => "Jupiter la plus grande",
+        "contenu" => "Située à environ 228 millions de kilomètres du Soleil, Mars est la quatrième planète du Système solaire. Sa couleur rouge est donnée par l'abondance d'oxyde de fer (rouille) sur sa surface. Il est facile de trouver Mars dans le ciel grâce à sa couleur, même à l'œil nu."
+        ]
+        ];
+
+        return $this->render('blog/index.html.twig', [
+            'pageTitre' => $pageTitre,
+            'posts' => $posts
+        ]);
+```
+
+Ensuite dans la vue `tmplates/blog/index.html.blog` nous allons recuprer le titre et boucler sur les posts poour les afficher.
+
+```
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ pageTitre }}{% endblock %}
+
+{% block body %}
+<section>
+{{ pageTitre }}
+
+        {% for post in posts %}
+            <article>
+                <h3>{{ post.titre }}</h3>
+                <p>{{ post.contenu }}</p>
+            </article>
+        {% endfor %}
+
+</section>
+{% endblock %}
+
 ```
