@@ -146,6 +146,8 @@ La syntaxe de **Twig** est basée sur ces trois constructions :
 
 Afin de beneficier de **emmet** dans les fichiers **twig** dans **VSCode** il faut ajouter une ligne dans le fichier **settings** de **VSCOde**
 
+![](./settings.png)
+
 ## A Faire
 
 ```
@@ -233,7 +235,7 @@ Dans la methode `index()` du **BlogController** avant de faire le `return` on va
 ```
 On va ajouter un titre pour la page blog et un tableau comportant le titre et le contenu de plusieurs posts de blog :
 
-$pageTitre = "Blog Astronomie";
+$pageTitre = "Blog Planete";
 
 $posts = [
         [
