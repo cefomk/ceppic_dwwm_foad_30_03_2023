@@ -53,7 +53,6 @@ symfony new --webapp notre_projet
 
 Renter dans le projet : 
 
----
 ## A faire
 
 ```
