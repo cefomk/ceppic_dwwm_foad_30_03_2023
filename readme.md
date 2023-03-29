@@ -2,8 +2,6 @@
 
 ## Instructions
 
----
-
 ## Git
 
 - Créer un **dépôt** sur **Github**, ou autres service : [Gitlab](https://gitlab.com),[Bitbucket](https://bitbucket.org/) (car il n'y pas que Github dans la vie !) avec cette intitulé : `FOAD_DWWM_3003023_pseudo_compte_github`
@@ -12,13 +10,9 @@
 - Envoyer (**push**) votre travail sur votre **dépôt github** crée précédemment
 - Cette etape est pas nécéssaire pour ceux qui m'ont déjà envoyé leur compte github : Envoyer moi par **email** votre **compte github** pour que je puisse voir votre travail
 
----
-
 ## Symfony
 
 Tout ce qui suit sera basé sur la documentation de **Symfony** : [https://symfony.com/doc/current/index.html](https://symfony.com/doc/current/index.html).
-
----
 
 ## Installation
 
@@ -32,7 +26,6 @@ Installer l'utilitaire en ligne de commande CLI `symfony` en suivant les instruc
 
 Vérifier que l'installation c'est bien passé en ouvrant un **terminal**(git bash,powershell,...) , la commande suivante doit vous la version de Symfony CLI : 5.5.2 au :
 
----
 
 ## A faire
 
@@ -42,7 +35,6 @@ symfony -V
 
 `Symfony CLI version 5.5.2 (c) 2021-2023 Fabien Potencier #StandWithUkraine Support Ukraine (2023-03-22T19:49:09Z - stable)`
 
----
 
 ## Créaton d'un nouveau projet
 
@@ -52,15 +44,12 @@ Afin de voir toutes les possibilitées qu'offre la **CLI** de **Symfony** , on t
 
 Creation d'un nouveau projet , dans un **terminal** :
 
----
 
 ## A faire
 
 ```
 symfony new --webapp notre_projet
 ```
-
----
 
 Renter dans le projet : 
 
@@ -70,7 +59,6 @@ Renter dans le projet :
 ```
 cd notre_projet
 ```
----
 
 Lancer le serveur interne de **Symfony** : 
 
@@ -102,8 +90,6 @@ La majeur partie du temps on va travailler dans 4 dossiers dans **Symfony** :
 - `public`
 - `src`
 - `templates`
-
----
 
 ## Controller
 
@@ -146,8 +132,6 @@ Dans l'**attribut** pour la **route** , on defnit un chemin `/test` et un nom po
 La **methode** `index()` envoie un tableau avec une variable `controller_name` qu'on recupere dans le **template** `{{ controller_name }}` 
 
 La gestion des **Vue** dans **Symfony** est géré par **Twig** [https://symfony.com/doc/current/templates.html](https://symfony.com/doc/current/templates.html) [https://Twig.symfony.com/](https://Twig.symfony.com/)
-
----
 
 ## Template , Twig
 
