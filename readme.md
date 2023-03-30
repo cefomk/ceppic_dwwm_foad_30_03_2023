@@ -212,9 +212,13 @@ Dans le fichier `base.html.twig` supprimer les lignes suivantes :
 	{{ encore_entry_script_tags('app') }}
 {% endblock %}
 ```
-Aiter une feuille de style
+Ajouter une feuille de style
 
-<link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+## A faire 
+
+```
+<li`nk href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+````
 
 Votre feuille de style devra se trouver dans le dossier `public` 
 
